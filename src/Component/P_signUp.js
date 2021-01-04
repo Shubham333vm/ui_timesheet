@@ -29,9 +29,9 @@ export default function P_signUp() {
 
   function postDetails(){
 
-    if(!re.test(email)){
-      M.toast({html:"invalid email",classes:"#f44336 red"})
-    }
+    // if(!re.test(email)){
+    //   M.toast({html:"invalid email",classes:"#f44336 red"})
+    // }
     fetch("/psignUp",{
 
         method:"post",
@@ -48,10 +48,10 @@ export default function P_signUp() {
 
       if(data.error){
         console.log(data.error)
-        M.toast({html:data.error,classes:"#f44336 red"})
+       // M.toast({html:data.error,classes:"#f44336 red"})
       }
       else{
-        M.toast({html:data,classes:"#f44336 red"})
+       // M.toast({html:data,classes:"#f44336 red"})
         history.push("/pSignIn")        
 
       }

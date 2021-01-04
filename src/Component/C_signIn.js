@@ -70,6 +70,7 @@ export default function C_signIn() {
           <h4>
             New in company ? <Link to="/cSignUp">signUp</Link>
           </h4>
+          <h3> Employer ? <Link to="/pSignIn"> SignIn</Link></h3>
         </div>
       </div>
     </div>

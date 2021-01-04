@@ -70,7 +70,7 @@ export default function P_signIn() {
            <h4>
              New in company ? <Link to="/pSignUp">signUp</Link>
           </h4>
-          {/* <h4> Employee ? </h4><Link to="/cSignIn">signIn</Link> */} 
+          <h4> Employee ? </h4><Link to="/cSignIn">signIn</Link> 
 
         </div>
       </div>

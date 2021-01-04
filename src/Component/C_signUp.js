@@ -30,9 +30,9 @@ export default function C_signUp() {
   function postDetails(){
 
     if(!re.test(email)){
-      M.toast({html:"invalid email",classes:"#f44336 red"})
+    //    M.toast({html:"invalid email",classes:"#f44336 red"})
     }
-    fetch("/signUp",{
+    fetch("/csignUp",{
 
         method:"post",
         headers:{
@@ -52,7 +52,7 @@ export default function C_signUp() {
       }
       else{
         M.toast({html:data,classes:"#f44336 red"})
-        history.push("/signIn")        
+        history.push("/cSignIn")        
 
       }
     })

@@ -3,10 +3,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
+import {Link,useHistory} from "react-router-dom"
 
 export default function DateSelector1() {
   const [workStatus, setworkStatus] = useState("");
   const [startDate, setstartDate] = useState(new Date());
+  const history = useHistory();
+
 
   var obj = localStorage.getItem("user")
 console.log(obj)
@@ -39,7 +42,7 @@ console.log(obj)
         } else {
          console.log("finish")
         //  dispatch(logIn());
-         // history.push("/");
+          history.push("/");
         }
       });
   }
@@ -73,6 +76,7 @@ console.log(obj)
                 id="workStatus"
                 onChange={status}
               >
+                <option value="select">Select</option>
                 <option value="Leave">Leave</option>
                 <option value="Work">Work</option>
               </select>

@@ -6,7 +6,12 @@ export default function WorkLogs() {
 
 
   useEffect(() => {
-    fetch("/workLogs")
+    fetch("/workLogs", {
+      method: "get",
+      headers: {
+        "authorization": "Bearer " + localStorage.getItem("token"),
+        "content-type": "application/json",
+      }})
       .then((response) => response.json())
       .then((data) => {
         setLogs(data);
@@ -46,6 +51,8 @@ export default function WorkLogs() {
             })}
         </tbody>
       </table>
+      <button><Link to="/pSignIn"> log out</Link></button>
+
     </div>
   );
 }
